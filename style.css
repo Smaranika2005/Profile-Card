@@ -1,0 +1,112 @@
+/* Attractive animated gradient background */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Keyframes for background animation */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Profile card floating animation */
+.profile-card {
+  background: linear-gradient(to bottom, #f3c6f0, #f1a6ec);
+  width: 320px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+  text-align: center;
+  color: #333;
+
+  /* ✨ Floating animation */
+  animation: floatCard 3s ease-in-out infinite;
+}
+
+/* Keyframes for floating effect */
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+.profile-card .profile-header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  /*border: 4px solid #fff;*/
+  margin-top: -60px;
+}
+
+.profile-card h2 {
+  margin: 15px 0 5px;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.profile-card h3 {
+  margin: 0 0 10px;
+  font-weight: 400;
+  color: #555;
+}
+
+.profile-card .about {
+  font-size: 0.9em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profile-card .socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.profile-card .socials a {
+  color: #333;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.profile-card .socials a:hover {
+  color: #fff;
+}
+
+.portfolio-btn {
+  background: #fff;
+  color: #e34bae;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background: #e34bae;
+  color: #fff;
+}
